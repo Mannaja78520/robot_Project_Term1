@@ -17,7 +17,7 @@ void setup(){
   while(carCheck(35)){
     Robot.Move(255);
   }
-  Robot.Move(0);
+  Robot.MovePower(0);
   Robot.servo1.write(100);
   delay(100);
 }
