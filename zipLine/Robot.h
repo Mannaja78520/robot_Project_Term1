@@ -27,7 +27,7 @@ class Robot{
     #define SOUND_SPEED 0.034
     
     void init();
-    void Move(int);
+    void MovePower(int);
     float UltraSonic();
 };
     
