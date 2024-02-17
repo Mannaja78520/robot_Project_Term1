@@ -13,7 +13,7 @@ void Robot::init(){
   delay(100);
  }
 
- void Robot::Move(int sp){
+ void Robot::MovePower(int sp){
   int enablePin = motorEnablePin;
   int motorPin1 = motorPin1; 
   int motorPin2 = motorPin2;
