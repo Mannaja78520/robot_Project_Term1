@@ -8,7 +8,8 @@ boolean carCheck(float distance){
 }
 
 void drop(){
-  
+  Robot.servo1.write(100);
+  delay(100);
 }
 
 void setup(){
@@ -18,8 +19,7 @@ void setup(){
     Robot.Move(255);
   }
   Robot.MovePower(0);
-  Robot.servo1.write(100);
-  delay(100);
+  drop();
 }
 
 void loop(){
