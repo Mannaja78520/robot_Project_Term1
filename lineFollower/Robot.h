@@ -2,38 +2,39 @@
 #define Robot_h
 
 #include <Arduino.h>
+#include <motor.h>
+
+//MotorPin
+#define motor0EnablePin 25
+#define motor0Pin1      26
+#define motor0Pin2      27
+#define motor1EnablePin 19
+#define motor1Pin1      22
+#define motor1Pin2      23
+
+//define sound speed in cm/uS
+#define SOUND_SPEED 0.034
+
+//SensorInfaratePin
+#define leftSensorPin  34
+#define rightSensorPin 4
+
+//UltraSonic
+#define trigPin 5
+#define echoPin 18
 
 class Robot{
   public:
-    //MotorPin
-    int motor1EnablePin = 25;
-    int motor1Pin1      = 26;
-    int motor1Pin2      = 27;
-    int motor2EnablePin =  1;
-    int motor2Pin1      = 22;
-    int motor2Pin2      = 23;
-
-    //SensorInfaratePin
-    const int leftSensorPin   = 34;
-    const int rightSensorPin  = 35;
-    
-    //UltraSonic
-    const int trigPin = 5;
-    const int echoPin = 18;
-
     //SensorVariable
     int LS = 0;
     int RS = 0;
     int Distance;
     long Duration;
 
-    //define sound speed in cm/uS
-    #define SOUND_SPEED 0.034
-    
     void init();
     void motor(int, int);
     void MovePower(int, int);
-    int InfarateSensor();
+    void InfarateSensor();
     float UltraSonic();
 };
     
