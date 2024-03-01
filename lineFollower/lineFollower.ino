@@ -19,10 +19,8 @@ void Wait(float distance){
 void setup(){
   Serial.begin(115200);
   Robot.init();
-  // pinMode(trigPin, OUTPUT);
-  // pinMode(echoPin, INPUT); 
   // Wait(14.00);
-  LineFollower(1);
+  LineFollower(500);
 }
 
 void loop(){

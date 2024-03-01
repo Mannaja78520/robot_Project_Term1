@@ -17,7 +17,7 @@
 
 //SensorInfaratePin
 #define leftSensorPin  34
-#define rightSensorPin 4
+#define rightSensorPin 32
 
 //UltraSonic
 #define trigPin 5

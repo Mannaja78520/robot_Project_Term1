@@ -12,24 +12,6 @@ void Robot::init(){
   pinMode(echoPin, INPUT);
  }
 
- void Robot::motor(int m, int sp){
-  int enablePin = m == 1 ? motor0EnablePin : m == 2 ? motor1EnablePin : 0;
-  int motorPin1 = m == 1 ? motor0Pin1 : m == 2 ? motor1Pin1 : 0; 
-  int motorPin2 = m == 1 ? motor0Pin2 : m == 2 ? motor1Pin2 : 0;
-  int writeMotor1 = LOW, writeMotor2 = LOW; 
-  if (sp > 0){
-    writeMotor1 = HIGH;
-    writeMotor2 = LOW;
-  }
-  if (sp < 0){
-    writeMotor1 = LOW;
-    writeMotor2 = HIGH;
-  }
-  digitalWrite(motorPin1, writeMotor1);
-  digitalWrite(motorPin2, writeMotor2);
-  analogWrite(enablePin, sp);
- }
-
  void Robot::MovePower(int motor1Speed, int motor2Speed){
   LM.spin(motor1Speed);
   RM.spin(motor2Speed);
