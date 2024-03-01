@@ -2,7 +2,7 @@
 #define Robot_h
 
 #include <Arduino.h>
-#include <motor.h>
+#include "motor/motor.h"
 
 //MotorPin
 #define motor0EnablePin 25

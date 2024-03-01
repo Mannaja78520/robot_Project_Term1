@@ -3,6 +3,7 @@
 
 #include <Arduino.h>
 #include <MobaTools.h>
+#include "motor/motor.h"
 
 class Robot{
   public:

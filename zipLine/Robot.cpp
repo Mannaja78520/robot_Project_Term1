@@ -1,5 +1,9 @@
 #include "Robot.h"
 
+Robot Robot;
+
+Motor Arm(20000, 8, 0, Robot.motorEnablePin, Eobot.motorPin1, Robot.motorPin2)
+
 void Robot::init(){
   pinMode(motorEnablePin, OUTPUT); 
   pinMode(motorPin1, OUTPUT);
